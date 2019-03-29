@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        table{border-collapse: collapse;}
+        th,td{padding: 5px;text-align: center;border:1px solid #999;min-width: 100px;}
+        th{background-color: #333;color:#fff;position: sticky;top:-1px;z-index: 2;}
+        td:first-child{background-color: #333;color: #fff;position: sticky;left:-1px;}
+    </style>
+    <script src="https://cdn.staticfile.org/vue/2.5.17-beta.0/vue.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            let t = new Vue({el:"#t"});
+        });
+    </script>
+</head>
+ 
+<body>
+    <table id="t">
+        <thead>
+            <tr>
+                <th v-for="(n,i) of 50">×Ö¶Î {{i+1}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(n,i) of 100">
+                <td v-for="(m,j) of 50">{{j+1}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+ 
+</html>
+
